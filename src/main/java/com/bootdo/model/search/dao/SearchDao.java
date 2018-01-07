@@ -1,12 +1,12 @@
 package com.bootdo.model.search.dao;
 
-import com.bootdo.model.search.entity.Article;
+import com.bootdo.model.search.entity.Game;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 /**
  * 搜索dao
  */
-public interface SearchDao extends ElasticsearchRepository<Article,String> {
+public interface SearchDao extends ElasticsearchRepository<Game,Long> {
 
-    Article findByAccountName(String accountName);
+
 }

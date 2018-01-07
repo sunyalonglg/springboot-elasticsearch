@@ -4,7 +4,11 @@
 <mapper namespace="com.bootdo.model.system.dao.UserDao">
 
 	<select id="findById" resultType="map" parameterType="map">
-		select * from t_user
+		SELECT
+			a.id,
+			a.game_name
+		FROM
+			`tb_games` a
 	</select>
 
 </mapper>

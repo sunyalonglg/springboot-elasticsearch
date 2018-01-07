@@ -1,13 +1,11 @@
 package com.bootdo.model.search.service;
 
 
-import com.bootdo.model.search.entity.Article;
+import com.bootdo.model.search.entity.Game;
 
 public interface SearchService {
 
-    Article queryAccountInfoById(String id);
+    Game findById(Long id);
 
-    Article queryAccountInfoByName(String accountName);
-
-    Article save(Article article);
+    Game save(Game article);
 }
