@@ -1,33 +1,24 @@
-# http://www.gnu.org/software/automake
+target/
+!.mvn/wrapper/maven-wrapper.jar
 
-Makefile.in
-/ar-lib
-/mdate-sh
-/py-compile
-/test-driver
-/ylwrap
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
 
-# http://www.gnu.org/software/autoconf
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-/autom4te.cache
-/autoscan.log
-/autoscan-*.log
-/aclocal.m4
-/compile
-/config.guess
-/config.h.in
-/config.sub
-/configure
-/configure.scan
-/depcomp
-/install-sh
-/missing
-/stamp-h1
-
-# https://www.gnu.org/software/libtool/
-
-/ltmain.sh
-
-# http://www.gnu.org/software/texinfo
-
-/texinfo.tex
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
