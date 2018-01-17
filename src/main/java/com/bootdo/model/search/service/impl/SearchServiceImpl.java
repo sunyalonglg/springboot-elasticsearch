@@ -6,6 +6,8 @@ import com.bootdo.model.search.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SearchServiceImpl implements SearchService{
 
@@ -21,5 +23,20 @@ public class SearchServiceImpl implements SearchService{
     public Game save(Game article) {
         Game save = searchDao.save(article);
         return save;
+    }
+
+    @Override
+    public void delete(Long id) {
+        searchDao.delete(id);
+    }
+
+    @Override
+    public Game findByDbId(Game game) {
+        return searchDao.findByDbId(game.getDbId());
+    }
+
+    @Override
+    public List<Game> findByGameName(Game game) {
+        return searchDao.findByGameName(game.getGameName());
     }
 }

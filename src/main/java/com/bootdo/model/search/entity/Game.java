@@ -3,6 +3,8 @@ package com.bootdo.model.search.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldIndex;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,8 +14,20 @@ public class Game implements Serializable {
 
     @Id
     private Long id;
-    @Field
+
+    @Field(index = FieldIndex.not_analyzed, type = FieldType.String)
+    private String dbId;
+
+    @Field(index = FieldIndex.analyzed, analyzer = "standard", store = true, searchAnalyzer = "standard", type = FieldType.String)
     private String gameName;
+
+    public String getDbId() {
+        return dbId;
+    }
+
+    public void setDbId(String dbId) {
+        this.dbId = dbId;
+    }
 
     public Long getId() {
         return id;
